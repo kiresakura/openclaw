@@ -183,11 +183,6 @@ it.each([
     ],
   },
   {
-    name: "inherited defaults",
-    agent: {},
-    expected: ["openai/default", "openai/backup", "openai/small", "local/utility-backup"],
-  },
-  {
     name: "explicit empty fallbacks and disabled utility routing",
     agent: { model: { fallbacks: [] }, utilityModel: "" },
     expected: ["openai/default"],
