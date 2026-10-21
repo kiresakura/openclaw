@@ -38,7 +38,7 @@ function summary(results: AuthProbeSummary["results"]): AuthProbeSummary {
     finishedAt: 2,
     durationMs: 1,
     totalTargets: results.length,
-    options: { timeoutMs: 20_000, concurrency: 2, maxTokens: 64 },
+    options: { timeoutMs: 20_000, concurrency: 2, maxTokens: 8 },
     results,
   };
 }
@@ -129,7 +129,7 @@ it("normalizes providers, trims profiles, and clamps the timeout", async () => {
       profileIds: ["work"],
       timeoutMs: 5_000,
       concurrency: 2,
-      maxTokens: 64,
+      maxTokens: 8,
     },
   });
 });
